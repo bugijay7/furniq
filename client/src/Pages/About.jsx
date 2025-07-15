@@ -1,5 +1,5 @@
 import React from 'react'
-import Abouthero from '../components/About/abouthero'
+import Abouthero from '../components/About/Abouthero'
 import Mission from '../components/About/Mission'
 import Craftmanship from '../components/About/Craftmanship'
 import Milestone from '../components/About/Milestone'
