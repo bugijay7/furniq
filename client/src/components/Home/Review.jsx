@@ -9,7 +9,7 @@ function Review({ productId }) {
 
   const fetchReviews = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/review/product/${productId}`);
+      const res = await axios.get(`https://furniq.onrender.com/api/review/product/${productId}`);
       setReviews(res.data);
     } catch (error) {
       console.error('Error fetching reviews:', error);
@@ -33,7 +33,7 @@ function Review({ productId }) {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        `http://localhost:3000/api/review/product/${productId}`,
+        `https://furniq.onrender.com/api/review/product/${productId}`,
         {
           rating: newReview.rating,
           comment: newReview.comment,

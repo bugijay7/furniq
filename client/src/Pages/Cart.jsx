@@ -10,7 +10,7 @@ function Cart() {
   const fetchCart = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:3000/api/cart', {
+      const res = await axios.get('https://furniq.onrender.com/api/cart', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCart(res.data);
@@ -28,7 +28,7 @@ function Cart() {
   const updateQuantity = async (product_id, quantity) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:3000/api/cart/${product_id}`, { quantity }, {
+      await axios.put(`https://furniq.onrender.com/api/cart/${product_id}`, { quantity }, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchCart();
@@ -40,7 +40,7 @@ function Cart() {
   const removeItem = async (product_id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:3000/api/cart/${product_id}`, {
+      await axios.delete(`https://furniq.onrender.com/api/cart/${product_id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchCart();

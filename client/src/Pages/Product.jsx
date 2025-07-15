@@ -14,7 +14,7 @@ function Product() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/products/${id}`);
+        const res = await axios.get(`https://furniq.onrender.com/api/products/${id}`);
         setProduct(res.data);
       } catch (err) {
         console.error(err);
@@ -37,7 +37,7 @@ function Product() {
       }
 
       await axios.post(
-        'http://localhost:3000/api/cart',
+        'https://furniq.onrender.com/api/cart',
         {
           product_id: product.id,
           quantity: quantity,

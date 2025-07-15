@@ -10,7 +10,7 @@ function OrderTracking() {
   const fetchOrders = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:3000/api/order', {
+      const res = await axios.get('https://furniq.onrender.com/api/order', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -27,7 +27,7 @@ function OrderTracking() {
   const fetchOrderItems = async (orderId) => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get(`http://localhost:3000/api/order/${orderId}`, {
+      const res = await axios.get(`https://furniq.onrender.com/api/order/${orderId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -56,7 +56,7 @@ function OrderTracking() {
   const cancelOrder = async (orderId) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:3000/api/order/${orderId}`, {
+      await axios.delete(`https://furniq.onrender.com/api/order/${orderId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

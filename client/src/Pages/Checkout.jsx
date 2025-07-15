@@ -10,7 +10,7 @@ function Checkout() {
   const fetchCart = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:3000/api/cart', {
+      const res = await axios.get('https://furniq.onrender.com/api/cart', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -36,7 +36,7 @@ function Checkout() {
 
       // Place the order
       await axios.post(
-        'http://localhost:3000/api/order',
+        'https://furniq.onrender.com/api/order',
         { items, total },
         {
           headers: {
@@ -46,7 +46,7 @@ function Checkout() {
       );
 
       // ✅ Clear the cart after order
-      await axios.delete('http://localhost:3000/api/cart/clear/all', {
+      await axios.delete('https://furniq.onrender.com/api/cart/clear/all', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

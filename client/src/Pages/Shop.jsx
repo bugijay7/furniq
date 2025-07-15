@@ -14,7 +14,7 @@ function Shop() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/api/products');
+        const res = await axios.get('https://furniq.onrender.com/api/products');
         setAllProducts(res.data);
         setProducts(res.data);
       } catch (error) {

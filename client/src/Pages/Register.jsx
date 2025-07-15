@@ -20,7 +20,7 @@ function Register() {
     setErrorMsg('');
 
     try {
-      const res = await axios.post('http://localhost:3000/api/auth/register', formData);
+      const res = await axios.post('https://furniq.onrender.com/api/auth/register', formData);
       localStorage.setItem('token', res.data.token); // store token
       navigate('/login'); // redirect to home or dashboard
     } catch (error) {
