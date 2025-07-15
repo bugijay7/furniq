@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@font-face {
+  font-family: 'Null Regular';
+  src: url('/fonts/Null-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ROM Light';
+  src: url('/fonts/ROM-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
