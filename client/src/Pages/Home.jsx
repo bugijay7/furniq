@@ -5,6 +5,7 @@ import Categories from '../components/Home/Categories';
 import PromoBanner from '../components/Home/PromoBanner';
 import ProductGrid from '../components/Home/ProductGrid';
 import Review from '../components/Home/Review';
+import Cta from '../components/About/Cta'
 
 function Home() {
   return (
